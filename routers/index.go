@@ -1,12 +1,17 @@
 package routers
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func Index(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", nil)
+}
+
+func Hello(c *gin.Context) {
+	c.HTML(http.StatusOK, "helloworld.html", nil)
 }
 
 func NotFoundError(c *gin.Context) {
